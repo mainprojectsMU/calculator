@@ -10,7 +10,25 @@ void multiply(double,double);
 void divide(double,double);
 
 int main() { //the program starts here
-
+	double A = ask_for_number("A");
+	double B = ask_for_number("B");
+	char operation = ask_for_operation();
+	switch(operation) {
+		case '+':
+			add(A,B);
+			break;
+		case '-':
+			subtract(A,B);
+			break;
+		case '*':
+			multiply(A,B);
+			break;
+		case '/':
+			divide(A,B);
+			break;
+		default:
+			cout << "Error:" << endl << "\tundefined operator." << endl;
+	}
 }
 
 double ask_for_number(string name = "") {
