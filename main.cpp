@@ -14,23 +14,30 @@ int main() { //the program starts here
 }
 
 double ask_for_number(string name = "") {
-	//print a message asking the user to enter a number (optionally: use the variable `name` to specify which variable the user is entering)
-	//return the number
+	double input;
+	cout << "please enter a number " << name << ": ";
+	cin >> input;
+	return input;
 }
 char ask_for_operation() {
-	//print the available operators {'+', '-', '*', '/'}
-	//print a message asking the user to choose one
-	//return the choice
+	char input;
+	cout << "available operators: +, -, *, /" << endl;
+	cout << "please enter one of the listed opeerators: ";
+	cin >> input;
+	return input;
 }
 void add(double A,double B) {
-	//print a message expressing the entire calculation `A+B=C`
+	cout << A << " + " << B << " = " << A+B;
 }
 void subtract(double A,double B) {
-	//print a message expressing the entire calculation `A-B=C`
+	cout << A << " - " << B << " = " << A-B;
 }
 void multiply(double A,double B) {
-	//print a message expressing the entire calculation `A*B=C`
+	cout << A << " * " << B << " = " << A*B;
 }
 void divide(double A,double B) {
-	//print a message expressing the entire calculation `A/B=C` (optionally: detect dividing by zero and display an error message instead)
+	if(B==0)
+		cout << "Error:" << endl << "\tdivision by zero." << endl;
+	else
+		cout << A << " / " << B << " = " << A/B;
 }
